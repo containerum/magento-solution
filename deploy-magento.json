@@ -22,19 +22,7 @@
                 "cpu": "{{.MAGENTO_CPU}}",
                 "memory": "{{.MAGENTO_RAM}}"
               }
-            },
-            "volumeMounts": [
-              {
-                "mountPath": "{{.MAGENTO_PATH}}",
-                "name": "{{.VOLUME}}",
-                "subPath": "{{.MAGENTO_NAME}}-{{.HASH}}{{.MAGENTO_PATH}}"
-              }
-            ]
-          }
-        ],
-        "volumes": [
-          {
-            "name": "{{.VOLUME}}"
+            }
           }
         ]
       }
