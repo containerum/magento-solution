@@ -34,7 +34,7 @@
               }
            ],
             "image": "{{.DB_IMAGE}}",
-            "name": "{{.PG_NAME}}",
+            "name": "{{.DB_NAME}}",
             "resources": {
               "requests": {
                 "cpu": "{{.MAGENTO_CPU}}",
