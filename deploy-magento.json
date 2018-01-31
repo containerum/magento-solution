@@ -1,0 +1,43 @@
+{
+  "kind": "Deployment",
+  "metadata": {
+    "name": "{{.MAGENTO_NAME}}-{{.HASH}}"
+  },
+  "spec": {
+    "replicas": 1,
+    "template": {
+      "metadata": {
+        "labels": {
+          "app": "{{.MAGENTO_NAME}}-{{.HASH}}"
+        },
+        "name": "{{.MAGENTO_NAME}}-{{.HASH}}"
+      },
+      "spec": {
+        "containers": [
+          {
+            "image": "{{.MAGENTO_IMAGE}}",
+            "name": "{{.MAGENTO_NAME}}",
+            "resources": {
+              "requests": {
+                "cpu": "{{.MAGENTO_CPU}}",
+                "memory": "{{.MAGENTO_RAM}}"
+              }
+            },
+            "volumeMounts": [
+              {
+                "mountPath": "{{.MAGENTO_PATH}}",
+                "name": "{{.VOLUME}}",
+                "subPath": "{{.MAGENTO_NAME}}-{{.HASH}}{{.MAGENTO_PATH}}"
+              }
+            ]
+          }
+        ],
+        "volumes": [
+          {
+            "name": "{{.VOLUME}}"
+          }
+        ]
+      }
+    }
+  }
+}

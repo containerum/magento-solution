@@ -1,0 +1,44 @@
+{
+  "env": {
+    "MAGENTO_IMAGE": "chadrien/magento2:5.6-apache-full-1.0.0-beta",
+    "MAGENTO_NAME": "magento2-solution",
+    "DB_IMAGE": "mysql",
+    "MAGENTO_NAME": "magento2-solution",
+    "DB_NAME": "mysql-solution",
+
+    "DB_PORT": "3306",
+    "MAGENTO_PORT": "80",
+
+    "MYSQL_ROOT_PASSWORD": "{{rand_string 16}}",
+    "MYSQL_DATABASE": "magento2",
+    "MYSQL_USER": "magento2",
+    "MYSQL_PASSWORD": "{{rand_string 16}}}",
+
+    "DB_PATH": "/var/lib/mysql",
+    "MAGENTO_PATH": "/var/www",
+    "HASH": "{{rand_string 5}}",
+
+    "MAGENTO_RAM": "512Mi",
+    "MAGENTO_CPU": "500m",
+    "DB_RAM": "512Mi",
+    "DB_CPU": "500m"
+ },
+ "run":[
+    {
+      "type": "deployment",
+      "config_file": "deploy-db.json"
+    },
+    {
+      "type": "service",
+      "config_file": "service-db.json"
+    },
+    {
+      "type": "deployment",
+      "config_file": "deploy-magento.json"
+    },
+    {
+      "type": "service",
+      "config_file": "service-magento.json"
+    }
+  ]
+}
