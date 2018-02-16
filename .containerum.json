@@ -1,10 +1,11 @@
 {
   "env": {
-    "MAGENTO_IMAGE": "chadrien/magento2:5.6-apache-full-1.0.0-beta",
-    "MAGENTO_NAME": "magento2-solution",
+    "MAGENTO_
+    
+    ": "chadrien/magento2:5.6-apache-full-1.0.0-beta",
+    "MAGENTO_NAME": "solution-magento2",
     "DB_IMAGE": "mysql",
-    "MAGENTO_NAME": "magento2-solution",
-    "DB_NAME": "mysql-solution",
+    "DB_NAME": "solution-mysql",
 
     "DB_PORT": "3306",
     "MAGENTO_PORT": "80",
