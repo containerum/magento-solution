@@ -11,7 +11,7 @@
     "MYSQL_ROOT_PASSWORD": "{{rand_string 16}}",
     "MYSQL_DATABASE": "magento2",
     "MYSQL_USER": "magento2",
-    "MYSQL_PASSWORD": "{{rand_string 16}}",
+    "MYSQL_PASSWORD": "12345678",
 
     "DB_PATH": "/var/lib/mysql",
     "MAGENTO_PATH": "/var/www",
