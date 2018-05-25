@@ -1,22 +1,12 @@
 {
-  "kind": "Deployment",
-  "metadata": {
-    "name": "{{.DB_NAME}}-{{.HASH}}"
-  },
-  "spec": {
-    "replicas": 1,
-    "template": {
-      "metadata": {
-        "labels": {
-          "app": "{{.DB_NAME}}-{{.HASH}}"
-        },
-        "name": "{{.DB_NAME}}-{{.HASH}}"
-      },
-      "spec": {
-        "containers": [
-          {
-            "env": [
-              {
+	"containers": [{
+		"image": "{{.DB_IMAGE}}",
+		"name": "{{.DB_NAME}}-{{.HASH}}",
+		"limits": {
+			"cpu": {{.DB_CPU}},
+			"memory": {{.DB_RAM}}
+		},
+		"env": [{
                 "name": "MYSQL_ROOT_PASSWORD",
                 "value": "{{.MYSQL_ROOT_PASSWORD}}"
               },
@@ -32,30 +22,7 @@
                 "name": "MYSQL_PASSWORD",
                 "value": "{{.MYSQL_PASSWORD}}"
               }
-           ],
-            "image": "{{.DB_IMAGE}}",
-            "name": "{{.DB_NAME}}",
-            "resources": {
-              "requests": {
-                "cpu": "{{.MAGENTO_CPU}}",
-                "memory": "{{.MAGENTO_RAM}}"
-              }
-            },
-            "volumeMounts": [
-              {
-                "mountPath": "{{.DB_PATH}}",
-                "name": "{{.VOLUME}}",
-                "subPath": "{{.DB_NAME}}-{{.HASH}}{{.DB_PATH}}"
-              }
-            ]
-          }
-        ],
-        "volumes": [
-          {
-            "name": "{{.VOLUME}}"
-          }
-        ]
-      }
-    }
-  }
+	}],
+	"name": "{{.DB_NAME}}-{{.HASH}}",
+	"replicas": 1
 }
