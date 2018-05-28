@@ -1,23 +1,10 @@
 {
-    "kind": "Service",
-    "metadata": {
-        "labels": {
-            "external": "false",
-            "{{.NS_SELECTOR}}": "{{.DB_NAME}}-{{.HASH}}"
-        },
-        "name": "{{.DB_NAME}}-{{.HASH}}"
-    },
-    "spec": {
-        "selector": {
-            "{{.NS_SELECTOR}}": "{{.DB_NAME}}-{{.HASH}}"
-        },
-        "ports": [
-            {
-                "protocol": "TCP",
-                "targetPort": {{.DB_PORT}},
-                "port": {{.DB_PORT}},
-                "name": "dbport"
-            }
-        ]
-    }
+    "name": "{{.DB_NAME}}-{{.HASH}}",
+    "deploy": "{{.DB_NAME}}-{{.HASH}}",
+    "ports": [{
+        "name": "pg",
+        "port": {{.DB_PORT}},
+        "target_port": {{.DB_PORT}},
+        "protocol": "TCP"
+        }]
 }
