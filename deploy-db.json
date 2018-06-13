@@ -22,6 +22,7 @@
                 "name": "MYSQL_PASSWORD",
                 "value": "{{.MYSQL_PASSWORD}}"
               }
+	   ]
 	}],
 	"name": "{{.DB_NAME}}{{.HASH}}",
 	"replicas": 1
