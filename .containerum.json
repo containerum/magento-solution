@@ -15,7 +15,7 @@
 
     "DB_PATH": "/var/lib/mysql",
     "MAGENTO_PATH": "/var/www",
-    "HASH": "{{rand_string 5}}",
+    "HASH": "{{rand_string_minus 5}}",
 
     "MAGENTO_RAM": "256",
     "MAGENTO_CPU": "250",

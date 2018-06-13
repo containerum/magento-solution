@@ -1,7 +1,7 @@
 {
 	"containers": [{
 		"image": "{{.DB_IMAGE}}",
-		"name": "{{.DB_NAME}}-{{.HASH}}",
+		"name": "{{.DB_NAME}}{{.HASH}}",
 		"limits": {
 			"cpu": {{.DB_CPU}},
 			"memory": {{.DB_RAM}}
@@ -23,6 +23,6 @@
                 "value": "{{.MYSQL_PASSWORD}}"
               }
 	}],
-	"name": "{{.DB_NAME}}-{{.HASH}}",
+	"name": "{{.DB_NAME}}{{.HASH}}",
 	"replicas": 1
 }
