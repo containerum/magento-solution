@@ -1,6 +1,6 @@
 {
-    "name": "{{.DB_NAME}}-{{.HASH}}",
-    "deploy": "{{.DB_NAME}}-{{.HASH}}",
+    "name": "{{.DB_NAME}}{{.HASH}}",
+    "deploy": "{{.DB_NAME}}{{.HASH}}",
     "ports": [{
         "name": "pg",
         "port": {{.DB_PORT}},

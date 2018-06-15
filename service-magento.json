@@ -1,6 +1,6 @@
 {
-    "name": "{{.MAGENTO_NAME}}-{{.HASH}}",
-    "deploy": "{{.MAGENTO_NAME}}-{{.HASH}}",
+    "name": "{{.MAGENTO_NAME}}{{.HASH}}",
+    "deploy": "{{.MAGENTO_NAME}}{{.HASH}}",
     "ports": [{
         "name": "redmine",
         "target_port": {{.MAGENTO_PORT}},

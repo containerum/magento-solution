@@ -1,12 +1,12 @@
 {
 	"containers": [{
 		"image": "{{.MAGENTO_IMAGE}}",
-		"name": "{{.MAGENTO_NAME}}-{{.HASH}}",
+		"name": "{{.MAGENTO_NAME}}{{.HASH}}",
 		"limits": {
 			"cpu": {{.MAGENTO_CPU}},
 			"memory": {{.MAGENTO_RAM}}
 		}
 	}],
-	"name": "{{.MAGENTO_NAME}}-{{.HASH}}",
+	"name": "{{.MAGENTO_NAME}}{{.HASH}}",
 	"replicas": 1
 }
