@@ -17,10 +17,10 @@
     "MAGENTO_PATH": "/var/www",
     "HASH": "{{rand_string_minus 5}}",
 
-    "MAGENTO_RAM": "256",
-    "MAGENTO_CPU": "250",
-    "DB_RAM": "256",
-    "DB_CPU": "250"
+    "MAGENTO_RAM": "128",
+    "MAGENTO_CPU": "100",
+    "DB_RAM": "128",
+    "DB_CPU": "100"
  },
  "run":[
     {
