@@ -56,15 +56,10 @@ In step 2 enter the following parameters to launch this Solution:
 * Database Server Password `password`
 * Database Name `magento2`
 
-![](/gif/magentosln_1.gif)
-
-In step 5 create an Admin account to manage your store:
-![](/gif/magentosln_2.gif)
+In step 5 create an Admin account to manage your store.
 
 Done!
 
 Your store is available at `x3.containerum.io:38289`.
 
 You can access the Admin page to manage your store at `x3.containerum.io:38289/admin`.
-
-![](/gif/magentosln_3.gif)
